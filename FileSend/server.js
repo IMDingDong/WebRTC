@@ -6,7 +6,7 @@ var app = express();
 var port = 19200;    // port 번호 19200
 
 app.listen(port, function() {
-    log_comment('트래커 서버가 시작되었습니다. : ' + port + '번');
+    log_comment('파일 전송 모듈이 시작되었습니다. : ' + port + '번');
 });
 // 본인의 파일 경로를 작성하세요
 app.use('/', express.static('/Users/DingDong/Desktop/SampleSharingSystem/p2p/FileSend'));
