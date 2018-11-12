@@ -23,9 +23,11 @@ const configuration = {
 
 // 랜덤으로 방 번호 생성 및 해쉬 값 설정
 // TODO: 받는 Peer의 peerId로 방 번호 설정
+/*
 if (!location.hash) {
   location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
+*/
 const chatHash = location.hash.substring(1);
 
 // TODO: Channel ID 변경
@@ -208,11 +210,12 @@ function receiveFile(data) {
     receiveBuffer = [];
 
     downloadAnchor.href = URL.createObjectURL(received);
-    downloadAnchor.download = 'test.png';
+    downloadAnchor.download = 'malware.zip';
     downloadAnchor.textContent = 'Click to download';
     downloadAnchor.style.display = 'block';
 
     closeDataChannels();
+    downloadAnchor.click();
   }
   } else {
   }
